@@ -32,7 +32,7 @@
 
 ## 计算机如何在显示器上画图
 
-![display_image](.\displayimage.png "display _image")
+![display_image](displayimage.png "display _image")
 
 - 显示分辨率：分辨率越高，图像越清晰。分辨率取决于网格 X 轴和 Y 轴上的像素数，即单位面积显示屏上像素的密度（PPI / DPI ）。屏幕的像素数即为分辨率相乘之积。
 
