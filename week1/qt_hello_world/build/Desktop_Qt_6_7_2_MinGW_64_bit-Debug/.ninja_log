@@ -1,0 +1,22 @@
+# ninja log v5
+671	2697	7420446131812637	CMakeFiles/qt_hello_world.dir/plotwidget.cpp.obj	6927c50475519b72
+19	146	7421343779653826	qt_hello_world_autogen/timestamp	2268fe273016c9e6
+19	146	7421343779653826	qt_hello_world_autogen/mocs_compilation.cpp	2268fe273016c9e6
+19	146	7421343779653826	D:/BMI-proj/BMI-studying/week1/qt_hello_world/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/qt_hello_world_autogen/timestamp	2268fe273016c9e6
+19	146	7421343779653826	D:/BMI-proj/BMI-studying/week1/qt_hello_world/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/qt_hello_world_autogen/mocs_compilation.cpp	2268fe273016c9e6
+647	2170	7421290602250789	CMakeFiles/qt_hello_world.dir/qt_hello_world_autogen/mocs_compilation.cpp.obj	f5f63b72ee0431cd
+650	2162	7421290602166602	CMakeFiles/qt_hello_world.dir/main.cpp.obj	72e2d7f2a73bdfbb
+2191	2405	7421343802118535	qt_hello_world.exe	427fc9c6b273b5cf
+619	671	7420446111580879	ui_plotwidget.h	b4f11407e920b453
+619	671	7420446111580879	D:/BMI-proj/BMI-studying/week1/qt_hello_world/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/ui_plotwidget.h	b4f11407e920b453
+163	2191	7421343800101514	CMakeFiles/qt_hello_world.dir/mainwindow.cpp.obj	701c3b1345299cf
+576	615	7420473121157601	ui_mainwindow.h	2f1e43579850a76e
+576	615	7420473121157601	D:/BMI-proj/BMI-studying/week1/qt_hello_world/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/ui_mainwindow.h	2f1e43579850a76e
+7	26	0	CMakeFiles/clean.additional	cee7e56548ea36fa
+27	105	0	clean	bf0ef9e7a9a4c649
+14	132	7421344676247879	qt_hello_world_autogen/timestamp	2268fe273016c9e6
+14	132	7421344676247879	qt_hello_world_autogen/mocs_compilation.cpp	2268fe273016c9e6
+14	132	7421344676247879	D:/BMI-proj/BMI-studying/week1/qt_hello_world/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/qt_hello_world_autogen/timestamp	2268fe273016c9e6
+14	132	7421344676247879	D:/BMI-proj/BMI-studying/week1/qt_hello_world/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/qt_hello_world_autogen/mocs_compilation.cpp	2268fe273016c9e6
+148	2234	7421344697252904	CMakeFiles/qt_hello_world.dir/mainwindow.cpp.obj	701c3b1345299cf
+2234	2450	7421344699326081	qt_hello_world.exe	427fc9c6b273b5cf
