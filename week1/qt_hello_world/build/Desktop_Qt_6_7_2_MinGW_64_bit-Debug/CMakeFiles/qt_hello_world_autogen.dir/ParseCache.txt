@@ -368,5 +368,5 @@ D:/BMI-proj/BMI-studying/week1/qt_hello_world/mainwindow.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/time.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/vadefs.h
  mdp:D:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include/wchar.h
-D:/BMI-proj/BMI-studying/week1/qt_hello_world/mainwindow.cpp
 D:/BMI-proj/BMI-studying/week1/qt_hello_world/main.cpp
+D:/BMI-proj/BMI-studying/week1/qt_hello_world/mainwindow.cpp

@@ -1,0 +1,35 @@
+
+    {
+        "version": "0.2.0",
+        "configurations": [
+            
+          {
+            "name": "Run Server",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/server.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "integratedTerminal",
+          },
+          {
+            "name": "Run Client",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/client.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "integratedTerminal",
+          }
+        ],
+        "compounds": [
+          {
+            "name": "Run Server and Client",
+            "configurations": ["Run Server", "Run Client"]
+          }
+        ]
+      }

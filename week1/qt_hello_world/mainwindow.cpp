@@ -26,6 +26,8 @@ MainWindow::MainWindow(QWidget *parent)
     button = new QPushButton("点我~", this);
     button->setGeometry(50, 50, 100, 30);
     connect(button, &QPushButton::clicked, this, &MainWindow::onButtonClicked);
+
+
 }
 MainWindow::~MainWindow(){}
 void MainWindow::onButtonClicked()

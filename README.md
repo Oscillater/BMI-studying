@@ -18,3 +18,13 @@ Document my journey of learning about brain-computer interfaces.
 
 - Use Qt to read data from an array and draw lines based on the data.
 
+### Advance Task
+
+#### Task 1: TCP / IP Forward
+
+#### Task 2: Read and Draw Forward
+
+- Draw 8 lines
+- Know time to draw a graph & image refresh rate( *TODO* )
+- Moving line (*TODO*)
+
