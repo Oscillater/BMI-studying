@@ -25,6 +25,8 @@ Document my journey of learning about brain-computer interfaces.
 #### Task 2: Read and Draw Forward
 
 - Draw 8 lines
-- Know time to draw a graph & image refresh rate( *TODO* )
-- Moving line (*TODO*)
+- Know time to draw a graph & image refresh rate & Moving line (Some docs I find below)
+
+  -  [Plot a Graph with Real Time Data | Qt Forum](https://forum.qt.io/topic/28708/plot-a-graph-with-real-time-data/13)
+  - [Qwt User's Guide: Qwt - Qt Widgets for Technical Applications (sourceforge.io)](https://qwt.sourceforge.io/)
 
