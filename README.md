@@ -26,7 +26,8 @@ Document my journey of learning about brain-computer interfaces.
 
 - Draw 8 lines
 - Know time to draw a graph & image refresh rate & Moving line (Some docs I find below)
-
-  -  [Plot a Graph with Real Time Data | Qt Forum](https://forum.qt.io/topic/28708/plot-a-graph-with-real-time-data/13)
+- [QT中Qwt、QChart、QCustomPlot使用与性能对比-CSDN博客](https://blog.csdn.net/xieliru/article/details/134831552)
+  - [Plot a Graph with Real Time Data | Qt Forum](https://forum.qt.io/topic/28708/plot-a-graph-with-real-time-data/13)
   - [Qwt User's Guide: Qwt - Qt Widgets for Technical Applications (sourceforge.io)](https://qwt.sourceforge.io/)
+  - [Qt Plotting Widget QCustomPlot - Realtime Data Demo](https://www.qcustomplot.com/index.php/demos/realtimedatademo)
 
