@@ -1,0 +1,9 @@
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/moving_line.dir
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/edit_cache.dir
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/rebuild_cache.dir
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/list_install_components.dir
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install.dir
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install/local.dir
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/install/strip.dir
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/moving_line_autogen_timestamp_deps.dir
+D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/CMakeFiles/moving_line_autogen.dir
