@@ -28,25 +28,23 @@ class MainWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit MainWindow(QWidget *parent = nullptr);
+    explicit MainWindow(QWidget *parent = nullptr,const QString &filePath="data.txt");
     ~MainWindow();
 
 private slots:
     void onButtonClicked();
 
 private:
-    QGraphicsView *graphicsView;
-    QGraphicsScene *scene;
     QPushButton *button;
     QLineSeries *series;
     QValueAxis *axisX;
     QValueAxis *axisY;
     QChart *chart;
     QChartView *chartView;
-    int x_index=201;
-    void drawLineChart(const QVector<qreal> &xData, const QVector<qreal> &yData);
+    DataReader reader;
+    QTimer timer;
+    void drawLineChart();
     void timeoutHandler();
-    void getNewValue();
 };
 
 #endif // MAINWINDOW_H

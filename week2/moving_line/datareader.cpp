@@ -5,37 +5,9 @@ DataReader::DataReader(const QString &filePath):file(filePath){
 DataReader::~DataReader(){
     file.close();
 }
-QVector<qreal> DataReader::readLine(bool lineIndex){
-    QVector<qreal> data;
-    QTextStream in(&file);
-    if(!file.isOpen()){
-        qDebug()<<"The file is not open.";
-    }
-    file.seek(0);
-    QString line;
-    if (!lineIndex){
-        line=in.readLine();
-        firstLinePosition=POINTSNUMBER;
-    }
-    else{
-        in.readLine();
-        line = in.readLine();
-        secondLinePosition=POINTSNUMBER;
-    }
-    QStringList numberStrs = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
-    for (int i = 0; i < qMin(POINTSNUMBER, numberStrs.size()); ++i) {
-        bool ok;
-        qreal number = numberStrs.at(i).toDouble(&ok);
-        if (ok) {
-            data.append(number);
-        } else {
-            qDebug() << "Invalid number format:" << numberStrs.at(i);
-        }
-    }
-    return data;
-}
 
-qreal DataReader::getValue(bool lineIndex){
+
+qreal DataReader::getValueX(){
     qreal data;
     QTextStream in(&file);
     if(!file.isOpen()){
@@ -44,23 +16,43 @@ qreal DataReader::getValue(bool lineIndex){
     file.seek(0);
     QString line;
     bool ok;
-    qDebug()<<firstLinePosition;
-    if (!lineIndex){
-        line=in.readLine();
-        QStringList numberStrs = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
-        data=numberStrs.at(firstLinePosition).toDouble(&ok);
-        firstLinePosition++;
+    line=in.readLine();
+    QStringList numberStrs = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
+    if (numberStrs.size()<=LinePosition){
+        return -1;
     }
-    else{
-        in.readLine();
-        line = in.readLine();
-        QStringList numberStrs = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
-        data=numberStrs.at(secondLinePosition).toDouble(&ok);
-        secondLinePosition++;
-    }
+    data=numberStrs.at(LinePosition).toDouble(&ok);
+    LinePosition++;
     if (ok) {
         return data;
     } else {
         qDebug() << "Error";
+        return -1;
     }
+}
+qreal DataReader::getValueY(){
+    qreal data;
+    QTextStream in(&file);
+    if(!file.isOpen()){
+        qDebug()<<"The file is not open.";
+    }
+    file.seek(0);
+    QString line;
+    bool ok;
+    in.readLine();
+    line = in.readLine();
+    QStringList numberStrs = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
+    if (numberStrs.size()<=LinePosition){
+        return -1;
+    }
+    data=numberStrs.at(LinePosition).toDouble(&ok);
+    if (ok) {
+        return data;
+    } else {
+        qDebug() << "Error";
+        return -1;
+    }
+}
+int DataReader::getPosition(){
+    return LinePosition;
 }

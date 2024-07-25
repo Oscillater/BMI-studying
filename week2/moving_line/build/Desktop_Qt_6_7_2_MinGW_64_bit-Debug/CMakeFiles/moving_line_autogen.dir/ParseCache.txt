@@ -3,6 +3,7 @@ D:/BMI-proj/BMI-studying/week2/moving_line/mainwindow.h
  mmc:Q_OBJECT
  mdp:D:/BMI-proj/BMI-studying/week2/moving_line/mainwindow.h
  mdp:D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/moving_line_autogen/moc_predefs.h
+ mdp:D:/BMI-proj/BMI-studying/week2/moving_line/datareader.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtCharts/QAbstractAxis
  mdp:D:/Qt/6.7.2/mingw_64/include/QtCharts/QAbstractSeries
  mdp:D:/Qt/6.7.2/mingw_64/include/QtCharts/QChart

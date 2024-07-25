@@ -9,12 +9,12 @@ class DataReader{
 public:
     DataReader(const QString &filePath);
     ~DataReader();
-    QVector<qreal> readLine(bool lineIndex);
-    qreal getValue(bool lineIndex);
+    qreal getValueX();
+    qreal getValueY();
+    int getPosition();
 private:
     QFile file;
-    int firstLinePosition=0;
-    int secondLinePosition=0;
+    int LinePosition=0;
 };
 
 #endif // DATAREADER_H

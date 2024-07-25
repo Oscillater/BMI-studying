@@ -1,5 +1,6 @@
 D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/moving_line_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/BMI-proj/BMI-studying/week2/moving_line/mainwindow.h \
   D:/BMI-proj/BMI-studying/week2/moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/moving_line_autogen/moc_predefs.h \
+  D:/BMI-proj/BMI-studying/week2/moving_line/datareader.h \
   D:/Qt/6.7.2/mingw_64/include/QtCharts/QAbstractAxis \
   D:/Qt/6.7.2/mingw_64/include/QtCharts/QAbstractSeries \
   D:/Qt/6.7.2/mingw_64/include/QtCharts/QChart \

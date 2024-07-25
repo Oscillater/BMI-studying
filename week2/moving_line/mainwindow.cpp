@@ -1,15 +1,9 @@
 // mainwindow.cpp
 #include "mainwindow.h"
-
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
+MainWindow::MainWindow(QWidget *parent,const QString &filePath)
+    : QMainWindow(parent),reader(filePath)
 {
-    scene = new QGraphicsScene(this);
-    graphicsView = new QGraphicsView(scene, this);
-    setCentralWidget(graphicsView);
     resize(1000, 600);
-    graphicsView->setFixedSize(1000, 600);
-    scene->setSceneRect(0, 0, 1000, 600);
     button = new QPushButton("点我~", this);
     button->setGeometry(50, 50, 100, 30);
     connect(button, &QPushButton::clicked, this, &MainWindow::onButtonClicked);
@@ -18,12 +12,13 @@ MainWindow::MainWindow(QWidget *parent)
     axisY = new QValueAxis();
     chart->addAxis(axisX,Qt::AlignBottom);
     chart->addAxis(axisY,Qt::AlignLeft);
-    axisX->setTickCount(201);
-    axisX->setRange(0, 200);
-    axisY->setRange(0, 3);
+    axisX->setRange(0, POINTSNUMBER);
+    axisX->setTickCount(POINTSNUMBER/10);
+    axisY->setRange(-1, 4);
+    axisY->setTickCount(1.0);
+    axisX->setLabelFormat("%.0f");
     chart->setTheme(QChart::ChartThemeLight);
     series = new QSplineSeries();
-    QTimer timer;
     chartView = new QChartView(chart);
     connect(&timer, &QTimer::timeout, this, &MainWindow::timeoutHandler);
     timer.setInterval(33);
@@ -31,58 +26,37 @@ MainWindow::MainWindow(QWidget *parent)
 MainWindow::~MainWindow(){}
 void MainWindow::onButtonClicked()
 {
-    QFile file("data.txt");
-    if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QTextStream in(&file);
-        QVector<qreal> xData, yData;
-        QString line = in.readLine();
-        QStringList numbers = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
-        foreach (const QString &number, numbers) {
-            qreal value = number.toDouble();
-            xData.append(value);
-
-        }
-        line = in.readLine();
-        numbers = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
-        foreach (const QString &number, numbers) {
-            qreal value = number.toDouble();
-            yData.append(value);
-        }
-        if (xData.size() != yData.size()) {
-            qDebug() << "The number of x values does not match the number of y values.";
-            return;
-        }
-        file.close();
-        drawLineChart(xData, yData);
-    }
+    QString filePath = "data.txt";
+    DataReader reader(filePath);
+    drawLineChart();
+    timer.start();
 }
 
-void MainWindow::drawLineChart(const QVector<qreal> &xData, const QVector<qreal> &yData)
+void MainWindow::drawLineChart()
 {
-
-    for (int i = 0; i < xData.size(); ++i) {
-        series->append(xData[i], yData[i]);
-    }
     chart->addSeries(series);
     series->attachAxis(axisX);
     series->attachAxis(axisY);
+    axisX->setLabelFormat("%.0f");
+    axisX->setTickCount(POINTSNUMBER/10);
     chart->setTitle("MOVING LINE");
     chart->legend()->setVisible(false);
     chartView->setRenderHint(QPainter::Antialiasing);
     setCentralWidget(chartView);
 }
 void MainWindow::timeoutHandler(){
-    QDateTime dt;
-    QString current_dt = dt.currentDateTime().toString("yyyy:MM:dd:hh:mm:ss:zzz");
-    qint64 ms = dt.currentDateTime().toMSecsSinceEpoch();
-    time_t t = static_cast<time_t>(ms / 1000);
-    srand(static_cast<uint>(t));
-    int y = rand() % 3;
-    series->append(x_index, y);
-    if(x_index > 201)
-        axisX->setRange(x_index-201, x_index);
-    x_index++;
-}
-void MainWindow::getNewValue(){
-
+    qreal xData,yData;
+    xData=reader.getValueX();
+    yData=reader.getValueY();
+    if (xData==-1 || yData==-1){
+        timer.stop();
+    }
+    else{
+        series->append(xData, yData);
+        int index=reader.getPosition();
+        if( index > POINTSNUMBER)
+            axisX->setRange(index-POINTSNUMBER,index);
+            axisX->setLabelFormat("%.0f");
+            axisX->setTickCount(POINTSNUMBER/10);
+    }
 }

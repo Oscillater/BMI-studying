@@ -6,7 +6,8 @@
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
-    MainWindow mainWindow;
+    QString filePath="data.txt";
+    MainWindow mainWindow(nullptr,filePath);
     mainWindow.show();
     return app.exec();
 }

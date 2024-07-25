@@ -20,9 +20,7 @@ Document my journey of learning about brain-computer interfaces.
 
 ### Advance Task
 
-#### Task 1: TCP / IP Forward
-
-#### Task 2: Read and Draw Forward
+#### Read and Draw Forward
 
 - Draw 8 lines
 - Know time to draw a graph & image refresh rate & Moving line (Some docs I find below)
@@ -31,3 +29,29 @@ Document my journey of learning about brain-computer interfaces.
   - [Qwt User's Guide: Qwt - Qt Widgets for Technical Applications (sourceforge.io)](https://qwt.sourceforge.io/)
   - [Qt Plotting Widget QCustomPlot - Realtime Data Demo](https://www.qcustomplot.com/index.php/demos/realtimedatademo)
 
+## Week 2
+
+### Theoretical knowledge 
+
+- Process
+- How memory pools/ FIFOs are shared and interlocked
+- Increase the effective frame rate and reduce CPU usage
+
+### Hands-on Practice
+
+#### Task 1: Moving Line
+
+- Try to draw a refresh line, the refresh rate is controlled at about 30 Hz
+
+<video controls>
+  <source src="./week2/Moving_Line.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+#### Task 2: Two threads
+
+- Two threads, one constantly reading and writing files, and the other constantly drawing, can have a TCP/IP signal with each other
+
+####  Task 3 : Many Lines
+
+- Increase the number of lines drawn.
