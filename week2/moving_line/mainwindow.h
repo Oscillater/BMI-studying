@@ -8,7 +8,6 @@
 #include <QPushButton>
 #include <QVector>
 #include <QPointF>
-#include <QtCharts/QSplineSeries>
 #include <QFile>
 #include <QTextStream>
 #include <QGraphicsLineItem>
@@ -19,9 +18,9 @@
 #include <QFileInfo>
 #include <QDebug>
 #include <QtCharts/QChart>
-#include <QtCharts/QSplineSeries>
 #include <QtCharts/QValueAxis>
 #include <QtCharts/QChartView>
+#include <QtCharts/QSplineSeries>
 #include <QTimer>
 class MainWindow : public QMainWindow
 {

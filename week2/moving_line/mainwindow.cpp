@@ -54,9 +54,10 @@ void MainWindow::timeoutHandler(){
     else{
         series->append(xData, yData);
         int index=reader.getPosition();
-        if( index > POINTSNUMBER)
+        if( index > POINTSNUMBER){
             axisX->setRange(index-POINTSNUMBER,index);
             axisX->setLabelFormat("%.0f");
             axisX->setTickCount(POINTSNUMBER/10);
+        }
     }
 }
