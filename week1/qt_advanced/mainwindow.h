@@ -35,7 +35,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QSplitter *splitter;
     void setWidget(QWidget *newWidget);
     void setScroll(QScrollArea *newScroll);
     void setLayout(QVBoxLayout *layout);

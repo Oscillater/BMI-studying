@@ -21,7 +21,7 @@ MainWindow::MainWindow(QWidget *parent) :
     axisX->setLabelFormat("%.0f");
     axisY->setRange(-1, 4);
     axisY->setTickCount(1.0);
-    chartView = new QChartView(chart);
+    chartView = new QChartView();
     series = new QSplineSeries(chart);
     chartView->setChart(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
