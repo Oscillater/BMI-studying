@@ -20,6 +20,7 @@ add_executable(${PROJECT_NAME}
     data.txt
     chartprocess.h
     chartprocess.cpp
+    data1.txt
 )
 target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Widgets Qt6::Gui Qt6::Core Qt6::Charts)
 set_target_properties(${PROJECT_NAME} PROPERTIES

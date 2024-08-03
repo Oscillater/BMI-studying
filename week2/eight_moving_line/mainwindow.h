@@ -1,6 +1,7 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 #include "datareader.h"
+#include "chartprocess.h"
 #include <QMainWindow>
 #include <QGraphicsView>
 #include <QGraphicsScene>
@@ -23,6 +24,7 @@
 #include <QTimer>
 #include <QThread>
 #include <QVBoxLayout>
+#include <QLabel>
 #define POINTSNUMBER 200
 #define STOPVALUE -1
 
@@ -43,5 +45,7 @@ private:
     QScrollArea *scrollArea;
     QWidget *container;
     QVBoxLayout *layout;
+    ChartProcess *chart1,*chart2,*chart3,*chart4,*chart5,*chart6,*chart7,*chart8;
+    DataReader *reader;
 };
 #endif // MAINWINDOW_H

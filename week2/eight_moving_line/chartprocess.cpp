@@ -1,29 +1,20 @@
 #include "chartprocess.h"
-ChartProcess::ChartProcess(QObject *parent,const QString filePath,QChartView *View):QObject(parent){
+ChartProcess::ChartProcess(QObject *parent,const QString filePath,const QString newname):QObject(parent){
     Path=filePath;
     chart = new QChart();
     axisX = new QValueAxis();
     axisY = new QValueAxis();
     widget=new QWidget;
-    chartView=View;
+    chartView=new QChartView();
     chartView->setChart(chart);
+    chartView->setFixedSize(1000,300);
     series = new QSplineSeries(chart);
     thread = new QThread();
-    dataReader = new DataReader(nullptr,"data.txt");
-    connect(dataReader, &DataReader::sendSeries, this, &ChartProcess::slotUpdate);
-    dataReader->moveToThread(thread);
-    thread->start();
-    dataReader->StartInit();
-    //现在的问题是……有两条路。一条是按照two_threads的思路走。一条是再建一个画图的线程（也不是不行）
-}
-ChartProcess::~ChartProcess(){
-    thread->quit();
-}
-void ChartProcess::beginThread(){
     chart->addAxis(axisX,Qt::AlignBottom);
     chart->addAxis(axisY,Qt::AlignLeft);
     chart->setTheme(QChart::ChartThemeLight);
     chart->legend()->setVisible(false);
+    chart->setTitle(newname);
     axisX->setRange(0, POINTSNUMBER);
     axisX->setTickCount(POINTSNUMBER/10);
     axisX->setLabelFormat("%.0f");
@@ -33,11 +24,20 @@ void ChartProcess::beginThread(){
     chart->addSeries(series);
     series->attachAxis(axisX);
     series->attachAxis(axisY);
+    dataReader = new DataReader(nullptr,Path);
+    connect(dataReader, &DataReader::sendSeries, this, &ChartProcess::slotUpdate);
+    dataReader->moveToThread(thread);
 
+}
+ChartProcess::~ChartProcess(){
+    thread->quit();
+}
+void ChartProcess::startThread(){
+    thread->start();
+    dataReader->StartInit();
 }
 void ChartProcess::slotUpdate(QVector<qreal> data)
 {
-    qDebug()<<"updata";
     qreal x,y;
     int Position;
     x=data[0];

@@ -199,7 +199,7 @@ build eight_moving_line_autogen/timestamp eight_moving_line_autogen/mocs_compila
 #############################################
 # Phony custom command for CMakeFiles\eight_moving_line_autogen_timestamp_deps
 
-build CMakeFiles/eight_moving_line_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/eight_moving_line_autogen_timestamp_deps: phony D$:/Qt/6.7.2/mingw_64/./bin/uic.exe D$:/Qt/6.7.2/mingw_64/./bin/moc.exe D$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a D$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a D$:/Qt/6.7.2/mingw_64/lib/libQt6Charts.a
+build CMakeFiles/eight_moving_line_autogen_timestamp_deps | ${cmake_ninja_workdir}CMakeFiles/eight_moving_line_autogen_timestamp_deps: phony D$:/Qt/6.7.2/mingw_64/./bin/uic.exe D$:/Qt/6.7.2/mingw_64/./bin/moc.exe D$:/Qt/6.7.2/mingw_64/lib/libQt6Widgets.a D$:/Qt/6.7.2/mingw_64/lib/libQt6Core.a D$:/Qt/6.7.2/mingw_64/lib/libQt6Gui.a D$:/Qt/6.7.2/mingw_64/lib/libQt6Charts.a
 
 
 #############################################

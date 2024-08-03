@@ -1,7 +1,5 @@
 #include "mainwindow.h"
 #include "chartprocess.h"
-//修改方向：新建一个类专门用来画图。这个类类似于一个Widget,里面包括chart之类的组件（也就是mainwindow里面这一坨全部挪进去）
-//MainWindow类则用来处理类似滚动条这样的逻辑，并且负责把这些Widget插进去。
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
@@ -30,17 +28,33 @@ void MainWindow::onButtonClicked()
     container->setFixedSize(1000, 1000);
     container->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
     layout->setSizeConstraint(QLayout::SetFixedSize);
-    //添加
-    QChartView *view1=new QChartView();
-    layout->addWidget(view1);
-    ChartProcess chart1(nullptr,"data.txt",view1);
-    chart1.chartView->setFixedSize(1000,300);
-    chart1.beginThread();
     scrollArea->setWidget(container);
+    chart1=new ChartProcess(nullptr,"data.txt","Graph1");
+    layout->addWidget(chart1->chartView);
+    chart1->startThread();
+    chart2=new ChartProcess(nullptr,"data1.txt","Graph2");
+    layout->addWidget(chart2->chartView);
+    chart2->startThread();
+    chart3=new ChartProcess(nullptr,"data.txt","Graph3");
+    layout->addWidget(chart3->chartView);
+    chart3->startThread();
+    chart4=new ChartProcess(nullptr,"data1.txt","Graph4");
+    layout->addWidget(chart4->chartView);
+    chart4->startThread();
+    chart5=new ChartProcess(nullptr,"data.txt","Graph5");
+    layout->addWidget(chart5->chartView);
+    chart5->startThread();
+    chart6=new ChartProcess(nullptr,"data.txt","Graph6");
+    layout->addWidget(chart6->chartView);
+    chart6->startThread();
+    chart7=new ChartProcess(nullptr,"data1.txt","Graph7");
+    layout->addWidget(chart7->chartView);
+    chart7->startThread();
+    chart8=new ChartProcess(nullptr,"data.txt","Graph8");
+    layout->addWidget(chart8->chartView);
+    chart8->startThread();
     scrollArea->setWidgetResizable(true);
-    scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded); // 垂直滚动条按需显示
-    scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn); // 水平滚动条总是显示
+    scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+    scrollArea->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
     setCentralWidget(scrollArea);
-    layout->addWidget(chart1.chartView);
-    QThread::sleep(5000);
 }

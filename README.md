@@ -55,3 +55,8 @@ Document my journey of learning about brain-computer interfaces.
 ####  Task 3 : Many Lines
 
 - Increase the number of lines drawn.
+
+# TODO: 
+
+- Improve performance: Use the QCustomPlot class, as well as OpenGL and other performance-enhancing plug-ins.
+- Change the UI : make it more user-friendly.

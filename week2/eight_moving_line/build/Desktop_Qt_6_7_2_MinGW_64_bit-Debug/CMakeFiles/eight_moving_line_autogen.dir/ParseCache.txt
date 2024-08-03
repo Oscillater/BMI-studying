@@ -362,6 +362,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/mainwindow.h
  mmc:Q_OBJECT
  mdp:D:/BMI-proj/BMI-studying/week2/eight_moving_line/mainwindow.h
  mdp:D:/BMI-proj/BMI-studying/week2/eight_moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/eight_moving_line_autogen/moc_predefs.h
+ mdp:D:/BMI-proj/BMI-studying/week2/eight_moving_line/chartprocess.h
  mdp:D:/BMI-proj/BMI-studying/week2/eight_moving_line/datareader.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtCharts/QAbstractAxis
  mdp:D:/Qt/6.7.2/mingw_64/include/QtCharts/QAbstractSeries
@@ -569,6 +570,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/mainwindow.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qpainterpath.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qpalette.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h
+ mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qpixelformat.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qpixmap.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qpointingdevice.h
@@ -578,6 +580,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/mainwindow.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qrgba64.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qscreen_platform.h
+ mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qtextoption.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qtgui-config.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtGui/qtguiexports.h
@@ -591,6 +594,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/mainwindow.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsWidget
+ mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/QPushButton
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/QVBoxLayout
@@ -604,6 +608,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/mainwindow.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsview.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicswidget.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/qgridlayout.h
+ mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayout.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayoutitem.h
  mdp:D:/Qt/6.7.2/mingw_64/include/QtWidgets/qmainwindow.h

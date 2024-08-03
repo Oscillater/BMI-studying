@@ -28,11 +28,11 @@
 class ChartProcess:public QObject{
     Q_OBJECT
 public:
-    ChartProcess(QObject *parent,const QString filePath="",QChartView *View=nullptr);
+    ChartProcess(QObject *parent,const QString filePath="",const QString name="");
     ~ChartProcess();
     QChartView *chartView;
     QLineSeries *series;
-    void beginThread();
+    void startThread();
 private:
     QWidget *widget;
     QChart *chart;

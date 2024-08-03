@@ -1,5 +1,6 @@
 D:/BMI-proj/BMI-studying/week2/eight_moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/eight_moving_line_autogen/EWIEGA46WW/moc_mainwindow.cpp: D:/BMI-proj/BMI-studying/week2/eight_moving_line/mainwindow.h \
   D:/BMI-proj/BMI-studying/week2/eight_moving_line/build/Desktop_Qt_6_7_2_MinGW_64_bit-Debug/eight_moving_line_autogen/moc_predefs.h \
+  D:/BMI-proj/BMI-studying/week2/eight_moving_line/chartprocess.h \
   D:/BMI-proj/BMI-studying/week2/eight_moving_line/datareader.h \
   D:/Qt/6.7.2/mingw_64/include/QtCharts/QAbstractAxis \
   D:/Qt/6.7.2/mingw_64/include/QtCharts/QAbstractSeries \
@@ -207,6 +208,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/build/Desktop_Qt_6_7_2_MinGW_64
   D:/Qt/6.7.2/mingw_64/include/QtGui/qpainterpath.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qpalette.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qpen.h \
+  D:/Qt/6.7.2/mingw_64/include/QtGui/qpicture.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qpixelformat.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qpixmap.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qpointingdevice.h \
@@ -216,6 +218,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/build/Desktop_Qt_6_7_2_MinGW_64
   D:/Qt/6.7.2/mingw_64/include/QtGui/qrgba64.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qscreen.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qscreen_platform.h \
+  D:/Qt/6.7.2/mingw_64/include/QtGui/qtextdocument.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qtextoption.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qtgui-config.h \
   D:/Qt/6.7.2/mingw_64/include/QtGui/qtguiexports.h \
@@ -229,6 +232,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/build/Desktop_Qt_6_7_2_MinGW_64
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsScene \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsView \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/QGraphicsWidget \
+  D:/Qt/6.7.2/mingw_64/include/QtWidgets/QLabel \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/QMainWindow \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/QPushButton \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/QVBoxLayout \
@@ -242,6 +246,7 @@ D:/BMI-proj/BMI-studying/week2/eight_moving_line/build/Desktop_Qt_6_7_2_MinGW_64
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicsview.h \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/qgraphicswidget.h \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/qgridlayout.h \
+  D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlabel.h \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayout.h \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/qlayoutitem.h \
   D:/Qt/6.7.2/mingw_64/include/QtWidgets/qmainwindow.h \

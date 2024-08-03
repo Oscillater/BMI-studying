@@ -6,6 +6,16 @@ DataReader::DataReader(QObject *parent,const QString &filePath) : QObject(parent
 {
     file.open(QIODevice::ReadOnly);
     qRegisterMetaType<QVector<qreal> >("QVector<qreal>");
+    QTextStream in(&file);
+    if(!file.isOpen()){
+        qDebug()<<"The file is not open.";
+    }
+    file.seek(0);
+    QString line;
+    line=in.readLine();
+    numberStrs1 = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
+    line = in.readLine();
+    numberStrs2 = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
     connect(this, &DataReader::StartInit, this, &DataReader::slotStartInit);
 }
 DataReader::~DataReader(){
@@ -20,19 +30,11 @@ void DataReader::slotStartInit()
 
 qreal DataReader::getValueX(){
     qreal data;
-    QTextStream in(&file);
-    if(!file.isOpen()){
-        qDebug()<<"The file is not open.";
-    }
-    file.seek(0);
-    QString line;
-    bool ok;
-    line=in.readLine();
-    QStringList numberStrs = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
-    if (numberStrs.size()<=LinePosition){
+    if (numberStrs1.size()<=LinePosition){
         return -1;
     }
-    data=numberStrs.at(LinePosition).toDouble(&ok);
+    bool ok;
+    data=numberStrs1.at(LinePosition).toDouble(&ok);
     LinePosition++;
     if (ok) {
         return data;
@@ -43,20 +45,11 @@ qreal DataReader::getValueX(){
 }
 qreal DataReader::getValueY(){
     qreal data;
-    QTextStream in(&file);
-    if(!file.isOpen()){
-        qDebug()<<"The file is not open.";
-    }
-    file.seek(0);
-    QString line;
     bool ok;
-    in.readLine();
-    line = in.readLine();
-    QStringList numberStrs = line.split(QRegularExpression("\\s+"), Qt::SkipEmptyParts);
-    if (numberStrs.size()<=LinePosition){
+    if (numberStrs2.size()<=LinePosition){
         return -1;
     }
-    data=numberStrs.at(LinePosition).toDouble(&ok);
+    data=numberStrs2.at(LinePosition).toDouble(&ok);
     if (ok) {
         return data;
     } else {

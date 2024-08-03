@@ -32,5 +32,7 @@ private:
     QFile file;
     QTimer *timer;
     int LinePosition=0;
+    QStringList numberStrs1;
+    QStringList numberStrs2;
 };
 #endif // DATAREADER_H
